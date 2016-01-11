@@ -3,6 +3,17 @@
 Scripts to run the [Splat!](http://www.qsl.net/kd2bd/splat.html) radio terrain
 mapping tool.
 
+## Dependencies
+
+This was built and tested on Debian Jessie (8.0) with the following versions:
+
+```
+ii  imagemagick    8:6.8.9.9-5  amd64        image manipulation programs -- bi
+ii  optipng        0.7.5-1      amd64        advanced PNG (Portable Network Gr
+ii  splat          1.4.0-2      amd64        analyze point-to-point terrestria
+ii  wget           1.16-1       amd64        retrieves files from the web
+```
+
 ## Configuration
 
 Edit the shell scripts to set the paths for the SDF elevation files and the
@@ -29,10 +40,11 @@ ERP="250"
 FREQMHZ="449.2250"
 ```
 
-Output:
+## Output
 
-![output map](example-map-thumb.jpg)
+![output map thumbnail](example-map-thumb.jpg)
 
 [Full resolution here](example-map.png)
 
+[Height above average terrain, in feet](example-haat.txt)
 
