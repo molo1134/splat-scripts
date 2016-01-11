@@ -33,3 +33,8 @@ Output:
 ![output map](example-map-thumb.jpg)
 
 [Full resolution here](example-map.png)
+
+## TODO:
+
+* Add script to automatically download SRTM data and convert it.
+
