@@ -1,7 +1,7 @@
 # splat-scripts
 
-Scripts to run the "Splat!" radio terrain mapping tool.  Read more about Splat!
-here: http://www.qsl.net/kd2bd/splat.html
+Scripts to run the [Splat!](http://www.qsl.net/kd2bd/splat.html) radio terrain
+mapping tool.
 
 ## Configuration
 
