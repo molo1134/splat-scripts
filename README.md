@@ -5,11 +5,12 @@ mapping tool.
 
 ## Configuration
 
-Edit `splat-radio.sh` and set the paths for the SDF elevation files and the
+Edit the shell scripts to set the paths for the SDF elevation files and the
 political borders file.
 
-Download the SRTM data for your location.  Convert that data to SDF elevation
-data.
+To download and convert the SRTM data use the `get-datafiles*.sh` scripts. Go
+get some coffee while this runs, it will take a while. After it is completed,
+you should be able to run the example profile as below.
 
 ## Usage
 
@@ -34,7 +35,4 @@ Output:
 
 [Full resolution here](example-map.png)
 
-## TODO:
-
-* Add script to automatically download SRTM data and convert it.
 
