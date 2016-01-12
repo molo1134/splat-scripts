@@ -33,16 +33,16 @@ INDEXURL="http://dds.cr.usgs.gov/srtm/version2_1/SRTM3/${CONTINENT}/"
 INDEXFILE=`mktemp`
 
 echo "getting index.."
-#wget -q -O - $INDEXURL | \
-#	sed -e '/hgt.zip/!d; s/.* \([NSWE0-9]\+\.\?hgt\.zip\).*$/\1/;' \
-#	> $INDEXFILE
+wget -q -O - $INDEXURL | \
+	sed -e '/hgt.zip/!d; s/.* \([NSWE0-9]\+\.\?hgt\.zip\).*$/\1/;' \
+	> $INDEXFILE
 
 mkdir -p $HGTFILEDIR
 mkdir -p $TOPOFILEDIR
 
 echo "retrieving files.."
 cd $HGTFILEDIR
-#wget -nv -N -B $INDEXURL -i $INDEXFILE
+wget -nv -N -B $INDEXURL -i $INDEXFILE
 cd -
 
 rm $INDEXFILE
