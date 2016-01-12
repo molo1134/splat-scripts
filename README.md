@@ -23,6 +23,35 @@ To download and convert the SRTM data use the `get-datafiles*.sh` scripts. Go
 get some coffee while this runs, it will take a while. After it is completed,
 you should be able to run the example profile as below.
 
+If interrupted, the retrieval of the SRTM `*hgt.zip` files over the network can
+be restarted and will resume where it left off.
+
+Note the following disk space requirements to complete the data conversion:
+
+* Africa: 5.4 GB
+* Australia: 1.2 GB
+* Eurasia: 9.0 GB
+* Islands: 92 MB
+* North America: 3.6 GB
+* South America: 3.3 GB
+* All: 23 GB
+
+The `*hgt.zip` files are not required after conversion, but they are not
+removed by the script.  They are retained so that a new run may commence
+without downloading all the files again from the server.  This happens via the
+`wget` `-N` option.
+
+After removing the `*hgt.zip` files, disk space required for operations comes
+down to:
+
+* Africa: 2.1 GB
+* Australia: 434 MB
+* Eurasia 3.4 GB
+* Islands: 36 MB
+* North America: 1.4 GB
+* South America: 1.3 GB
+* All: 8.5 GB
+
 ## Usage
 
 ```
