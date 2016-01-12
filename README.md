@@ -8,9 +8,9 @@ mapping tool.
 This was built and tested on Debian Jessie (8.0) with the following versions:
 
 ```
+ii  splat          1.4.0-2      amd64        analyze point-to-point terrestria
 ii  imagemagick    8:6.8.9.9-5  amd64        image manipulation programs -- bi
 ii  optipng        0.7.5-1      amd64        advanced PNG (Portable Network Gr
-ii  splat          1.4.0-2      amd64        analyze point-to-point terrestria
 ii  wget           1.16-1       amd64        retrieves files from the web
 ```
 
@@ -42,15 +42,15 @@ FREQMHZ="449.2250"
 
 Parameters are as follows:
 
-* NAME: used to uniquely name files
-* CALL: will be labeled onto the map
-* LAT: latitude, decimal degrees
-* LON: longitude, decimal degrees (East is positive)
-* HTAGL: height above ground level -- without units the default is in feet; use
-  a "m" suffix for meters
-* ERP: effective radiated power in Watts -- be sure you take feedline loss and
-  antenna gain into account; enter ERP="0" to produce path loss plots
-* FREQMHZ: frequency in MHz
+* `NAME`: used to uniquely name files
+* `CALL`: will be labeled onto the map
+* `LAT`: latitude, decimal degrees
+* `LON`: longitude, decimal degrees (East is positive)
+* `HTAGL`: height above ground level -- without units the default is in feet;
+  use a "m" suffix for meters
+* `ERP`: effective radiated power in Watts -- be sure you take feedline loss
+  and antenna gain into account; enter ERP="0" to produce path loss plots
+* `FREQMHZ`: frequency in MHz
 
 ## Output
 
