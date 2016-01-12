@@ -63,7 +63,7 @@ for e in *.zip ; do
 		cd $TOPOREALPATH
 		nice srtm2sdf -d /dev/null $HGTREALPATH/$HGTFILE
 		echo "compressing.."
-		nice bzip2 -f *.sdf
+		nice bzip2 -f -- *.sdf
 		echo "deleting hgt file.."
 		cd $HGTREALPATH
 		rm $HGTFILE
