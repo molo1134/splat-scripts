@@ -40,6 +40,18 @@ ERP="250"
 FREQMHZ="449.2250"
 ```
 
+Parameters are as follows:
+
+* NAME: used to uniquely name files
+* CALL: will be labeled onto the map
+* LAT: latitude, decimal degrees
+* LON: longitude, decimal degrees (East is positive)
+* HTAGL: height above ground level -- without units the default is in feet; use
+  a "m" suffix for meters
+* ERP: effective radiated power in Watts -- be sure you take feedline loss and
+  antenna gain into account
+* FREQMHZ: frequency in MHz
+
 ## Output
 
 ![output map thumbnail](example-map-thumb.jpg)
@@ -47,4 +59,16 @@ FREQMHZ="449.2250"
 [Full resolution here](example-map.png)
 
 [Height above average terrain, in feet](example-haat.txt)
+
+## Prediction and propagation notes
+
+These predictions are configured to estimate a *simplex* contact, with a
+**receiver station at 2 meters (6 feet)**, similar to a mobile station.  This
+is not a valid prediction for access to repeater stations on towers.  This of
+course can be changed by editing the `splat-radio.sh` script.
+
+The model does not take reflections and multipath into account.
+
+Defaults were chosen for things like ground permeativity and other parameters.
+Adjust as needed if your situation warrants it.
 
