@@ -3,4 +3,8 @@
 .swp
 .swo
 splat-datafiles
+*.lcf
+*.lrp
+*.qth
+*.scf
 
