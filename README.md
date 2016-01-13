@@ -8,11 +8,16 @@ mapping tool.
 This was built and tested on Debian Jessie (8.0) with the following versions:
 
 ```
-ii  splat          1.4.0-2      amd64        analyze point-to-point terrestria
-ii  imagemagick    8:6.8.9.9-5  amd64        image manipulation programs -- bi
-ii  optipng        0.7.5-1      amd64        advanced PNG (Portable Network Gr
-ii  wget           1.16-1       amd64        retrieves files from the web
+ii  splat          1.4.0-2       amd64        analyze point-to-point terrestria
+ii  coreutils      8.23-4        amd64        GNU core utilities
+ii  imagemagick    8:6.8.9.9-5   amd64        image manipulation programs -- bi
+ii  optipng        0.7.5-1       amd64        advanced PNG (Portable Network Gr
+ii  sed            4.2.2-4+b1    amd64        The GNU sed stream editor
+ii  wget           1.16-1        amd64        retrieves files from the web
+ii  unzip          6.0-16+deb8u2 amd64        De-archiver for .zip files
 ```
+
+On **Ubuntu**, be sure that the `realpath` package is installed.
 
 ## Configuration
 
