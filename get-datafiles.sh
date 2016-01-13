@@ -34,7 +34,7 @@ INDEXFILE=`mktemp`
 
 echo "getting index.."
 wget -q -O - $INDEXURL | \
-	sed -e '/hgt.zip/!d; s/.* \([NSWE0-9]\+\.\?hgt\.zip\).*$/\1/;' \
+	sed -r -e '/hgt.zip/!d; s/.* ([NSWE0-9]+\.?hgt\.zip).*$/\1/;' \
 	> $INDEXFILE
 
 mkdir -p $HGTFILEDIR
@@ -58,7 +58,7 @@ cd $HGTFILEDIR
 for e in *.zip ; do 
 	echo $e
 	nice unzip -o $e
-	HGTFILE=`echo $e | sed -e 's/\.\?hgt.zip/.hgt/'`
+	HGTFILE=`echo $e | sed -r -e 's/\.?hgt.zip/.hgt/'`
 	if [ -r $HGTFILE ]; then
 		cd $TOPOREALPATH
 		nice srtm2sdf -d /dev/null $HGTREALPATH/$HGTFILE

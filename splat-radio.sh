@@ -148,7 +148,7 @@ $NICE optipng -q $MAPPNGFILE
 
 # in feet
 HAATFT=`grep "Antenna height above average terrain" $REPFILE | \
-	sed -e "s/^.*: \([-0-9.]\+\) .*$/\1/;"`
+	sed -r -e "s/^.*: ([-0-9.]+) .*$/\1/;"`
 
 rm -f $QTHFILE $LRPFILE $LCFFILE $SCFFILE $MAPPPMFILE $REPFILE $HAATFILE
 
