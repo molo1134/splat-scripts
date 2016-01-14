@@ -32,6 +32,31 @@ INDEXURL="http://dds.cr.usgs.gov/srtm/version2_1/SRTM3/${CONTINENT}/"
 
 INDEXFILE=`mktemp`
 
+if [ ! -x `which srtm2sdf` ]; then
+	echo "error: not found in path: srtm2sdf splat conversion utility"
+	exit 1
+fi
+
+if [ ! -x `which realpath` ]; then
+	echo "error: not found in path: realpath"
+	exit 1
+fi
+
+if [ ! -x `which wget` ]; then
+	echo "error: not found in path: wget"
+	exit 1
+fi
+
+if [ ! -x `which unzip` ]; then
+	echo "error: not found in path: unzip"
+	exit 1
+fi
+
+if [ ! -x `which bzip2` ]; then
+	echo "error: not found in path: bzip2"
+	exit 1
+fi
+
 echo "getting index.."
 wget -q -O - $INDEXURL | \
 	sed -r -e '/hgt.zip/!d; s/.* ([NSWE0-9]+\.?hgt\.zip).*$/\1/;' \
