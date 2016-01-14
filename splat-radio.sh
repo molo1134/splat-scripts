@@ -19,6 +19,21 @@ BORDERFILE=splat-datafiles/borders/co99_d00.dat
 # load config
 . ./$1
 
+if [ ! -x `which splat` ]; then
+	echo "error: not found in path: splat"
+	exit 1
+fi
+
+if [ ! -x `which convert` ]; then
+	echo "error: not found in path: convert"
+	exit 1
+fi
+
+if [ ! -x `which optipng` ]; then
+	echo "error: not found in path: optipng"
+	exit 1
+fi
+
 # no more variables to edit below here
 
 CLEANCALL=`echo $CALL | sed -e 's|/|-|g;'`
