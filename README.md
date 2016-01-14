@@ -81,7 +81,7 @@ Parameters are as follows:
 * `LAT`: latitude, decimal degrees
 * `LON`: longitude, decimal degrees (East is positive)
 * `HTAGL`: height above ground level -- without units the default is in feet;
-  use a "m" suffix for meters
+  use a "m" suffix for meters (e.g. "30" means 30 feet; "10m" means 10 meters)
 * `ERP`: effective radiated power in Watts -- be sure you take feedline loss
   and antenna gain into account; enter ERP="0" to produce path loss plots
 * `FREQMHZ`: frequency in MHz
@@ -105,4 +105,8 @@ The model does not take reflections and multipath into account.
 
 Defaults were chosen for things like ground permeativity and other parameters.
 Adjust as needed if your situation warrants it.
+
+## To do
+
+* More error checking.
 
