@@ -17,7 +17,7 @@ ii  wget           1.16-1        amd64        retrieves files from the web
 ii  unzip          6.0-16+deb8u2 amd64        De-archiver for .zip files
 ```
 
-On **Ubuntu**, be sure that the `realpath` package is installed.
+Success was also reported on Ubuntu, FreeBSD, and OpenBSD.
 
 ## Configuration
 
