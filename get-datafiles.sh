@@ -37,8 +37,8 @@ if [ ! -x `which srtm2sdf` ]; then
 	exit 1
 fi
 
-if [ ! -x `which realpath` ]; then
-	echo "error: not found in path: realpath"
+if [ ! -x `which readlink` ]; then
+	echo "error: not found in path: readlink"
 	exit 1
 fi
 
@@ -74,8 +74,8 @@ rm $INDEXFILE
 
 # to minimize disk space required, run srtm2sdf on each file as it is unzipped.
 
-HGTREALPATH=`realpath $HGTFILEDIR`
-TOPOREALPATH=`realpath $TOPOFILEDIR`
+HGTREALPATH=`readlink -f $HGTFILEDIR`
+TOPOREALPATH=`readlink -f $TOPOFILEDIR`
 PWD=`pwd`
 
 echo "unpacking hgt files.."
