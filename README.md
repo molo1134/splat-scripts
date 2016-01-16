@@ -15,6 +15,7 @@ ii  optipng        0.7.5-1       amd64        advanced PNG (Portable Network Gr
 ii  sed            4.2.2-4+b1    amd64        The GNU sed stream editor
 ii  wget           1.16-1        amd64        retrieves files from the web
 ii  unzip          6.0-16+deb8u2 amd64        De-archiver for .zip files
+ii  time           1.7-25        amd64        The GNU time program for measuring cpu resource usage
 ```
 
 Success was also reported on Ubuntu, FreeBSD, and OpenBSD.
