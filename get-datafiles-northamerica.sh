@@ -3,6 +3,8 @@
 # get the SRTM data files and convert them for splat use
 # results in ~3.6 GB disk space consumed
 
+# License: Public domain / CC-0
+
 # for state/county borders
 BORDERDIR=splat-datafiles/borders/
 

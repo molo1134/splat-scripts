@@ -1,7 +1,9 @@
 #!/bin/sh
 
 # get the SRTM data files and convert them for splat use
-#
+
+# License: Public domain / CC-0
+
 # Takes one parameter: the continent to retrieve.  Valid values:
 #
 # Africa

@@ -2,6 +2,8 @@
 #
 # Generate Splat map and HAAT calculation
 
+# License: Public domain / CC-0
+
 # dependencies:
 # - splat 1.4.0
 # - ImageMagick "convert"
