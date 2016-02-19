@@ -138,6 +138,12 @@ cat > $SCFFILE << EOF
  18: 142,  63, 255
 EOF
 
+if [ $ERP -eq 0 ] ; then
+	MAXDB="-db 160"
+else
+	MAXDB=""
+fi
+
 # -R 100 = 100 miles max
 # -L 6 = 6 ft AGL for RX
 # -m 1.333 = earth radius multiplier
@@ -146,13 +152,8 @@ EOF
 # -d = path to elevation data files
 # -o = output file
 # -olditm = old ITM analysis, seems more accurate
-if [ $ERP -eq 0 ] ; then
-	time $NICE splat -t $QTHFILE -R 100 -L 6 -m 1.333 -db 160 -erp $ERP \
-		-d $TOPOFILEDIR -b $BORDERFILE -olditm -o $MAPPPMFILE
-else
-	time $NICE splat -t $QTHFILE -R 100 -L 6 -m 1.333 -erp $ERP \
-		-d $TOPOFILEDIR -b $BORDERFILE -olditm -o $MAPPPMFILE
-fi
+time $NICE splat -t $QTHFILE -R 100 -L 6 -m 1.333 $MAXDB -erp $ERP \
+	-d $TOPOFILEDIR -b $BORDERFILE -olditm -o $MAPPPMFILE
 
 rm -f $MAPPNGFILE $MAPJPGTHMBFILE
 
