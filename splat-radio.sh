@@ -18,8 +18,15 @@ BORDERFILE=splat-datafiles/borders/co99_d00.dat
 
 # Usage: ./splat-radio.sh example.cfg
 
+CONFIG="$1"
+if [ ! -r "$CONFIG" ]; then
+	echo "unable to read $CONFIG"
+	exit 1
+fi
+CONFIGREALPATH=`readlink -f "$CONFIG"`
+
 # load config
-. ./$1
+. $CONFIGREALPATH
 
 if [ ! -x `which splat` ]; then
 	echo "error: not found in path: splat"
