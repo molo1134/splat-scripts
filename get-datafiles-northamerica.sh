@@ -5,7 +5,7 @@
 
 # License: Public domain / CC-0
 
-# for state/county borders
+# for state/county borders -- US only.
 BORDERDIR=splat-datafiles/borders/
 
 BORDERURL="https://web.archive.org/web/20130331144934/http://www.census.gov/geo/cob/bdy/co/co00ascii/co99_d00_ascii.zip"

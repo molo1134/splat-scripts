@@ -19,8 +19,14 @@ BORDERFILE=splat-datafiles/borders/co99_d00.dat
 # Usage: ./splat-radio.sh example.cfg
 
 CONFIG="$1"
+
+if [ "x$CONFIG" = "x" ]; then
+	echo "usage: $0 <config.cfg>"
+	exit 1
+fi
+
 if [ ! -r "$CONFIG" ]; then
-	echo "unable to read $CONFIG"
+	echo "unable to read \"$CONFIG\""
 	exit 1
 fi
 CONFIGREALPATH=`readlink -f "$CONFIG"`
