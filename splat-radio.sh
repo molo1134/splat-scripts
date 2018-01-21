@@ -49,6 +49,21 @@ if [ ! -x `which optipng` ]; then
 	exit 1
 fi
 
+if [ ! -e "$BORDERFILE" ]; then
+	echo "warning: no border file found: \"$BORDERFILE\""
+fi
+
+if [ ! -e "$TOPOFILEDIR" ]; then
+	echo "error: topo dir not found: \"$TOPOFILEDIR\""
+	exit 1
+fi
+
+if [ ! -e "$( ls -1 $TOPOFILEDIR/*.sdf.bz2 | head -1 )" ]; then
+	echo "error: no topography files found"
+	exit 1
+fi
+
+
 # no more variables to edit below here
 
 CLEANCALL=`echo $CALL | sed -e 's|/|-|g;'`
