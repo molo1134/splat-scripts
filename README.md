@@ -9,6 +9,7 @@ This was built and tested on Debian Jessie (8.0) with the following versions:
 
 ```
 ii  splat          1.4.0-2       amd64        analyze point-to-point terrestria
+ii  bc             1.06.95-9     amd64        GNU bc arbitrary precision calcul
 ii  coreutils      8.23-4        amd64        GNU core utilities
 ii  imagemagick    8:6.8.9.9-5   amd64        image manipulation programs -- bi
 ii  optipng        0.7.5-1       amd64        advanced PNG (Portable Network Gr
